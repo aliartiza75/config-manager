@@ -16,7 +16,6 @@ mongo_port = int(os.environ['MONGO_DB_PORT'])
 
 # Importing models
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(__file__)), '..'))
-from models import config_manager_model as conf_mang_model
 
 
 class ConfigurationManagerService():
@@ -41,7 +40,7 @@ class ConfigurationManagerService():
         try:
             config_manager_collection_obj = self.db.configuration_manager
             # check if record exists
-            record_exists = cm.find_one({"tenant": tenant, "integration_type": integration_type})
+            record_exists = config_manager_collection_obj.find_one({"tenant": tenant, "integration_type": integration_type})
             if (record_exists):
                 del record_exists['_id']
                 new_record = {"$set": {"tenant": tenant,
@@ -69,8 +68,8 @@ class ConfigurationManagerService():
         It will extract a document based on its tenant and configurations
         '''
         try:
-            cm = self.db.configuration_manager
-            record_exists = cm.find_one({"tenant": tenant, "integration_type": integration_type})
+            config_manager_collection_obj = self.db.configuration_manager
+            record_exists = config_manager_collection_obj.find_one({"tenant": tenant, "integration_type": integration_type})
             if record_exists:
                 return True, record_exists
             else:

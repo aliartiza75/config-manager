@@ -3,6 +3,18 @@ This repository contains flask based endpoints for configuration manager service
 
 ## Configurations and server initialization
 
+* Instal docker ce version [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+* Start mongodb server:
+```bash
+    $ sudo docker run --name=config-manage-mongodb --net=host -d mongo:latest 
+```
+
+* Check mongodb server is running:
+```bash
+    $ sudo docker logs config-manage-mongodb
+```
+
 * Move inside the project folder:
 ```bash
     $ cd config-manager
@@ -14,7 +26,7 @@ This repository contains flask based endpoints for configuration manager service
     $ python3 -m pip install --user config-manager-venv
 ```
 
-* Creating a virtualenv
+* Create a virtualenv
 ```bash
     $ python3 -m virtualenv env
 ```

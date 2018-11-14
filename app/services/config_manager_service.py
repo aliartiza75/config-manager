@@ -1,5 +1,5 @@
 ###################################################################################################
-# Summary: File contains code for configuration manager Model
+# Summary: File contains code for configuration manager service
 ###################################################################################################
 import os
 import sys

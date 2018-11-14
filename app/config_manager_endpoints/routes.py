@@ -1,5 +1,5 @@
 ###################################################################################################
-# Summary: This file contains routes for configuration manager service
+# Summary: This file contains routes for configuration manager
 ###################################################################################################
 # sys modules
 import os

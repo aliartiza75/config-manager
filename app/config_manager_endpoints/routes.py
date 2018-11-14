@@ -6,7 +6,6 @@ import os
 import sys
 import json
 from flask import Blueprint
-from mongoengine import *
 from flask import request, jsonify, abort
 mod = Blueprint('config_manager', __name__)
 

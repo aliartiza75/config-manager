@@ -28,7 +28,7 @@ This repository contains flask based endpoints for configuration manager service
 
 * Create a virtualenv
 ```bash
-    $ python3 -m virtualenv env
+    $ python3 -m virtualenv config-manager-venv
 ```
 
 * Activate virtual environment

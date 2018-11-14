@@ -3,7 +3,7 @@ This repository contains flask based endpoints for configuration manager service
 
 ## Configurations and server initialization
 
-* Instal docker ce version [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+* Install docker ce version [link](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
 * Start mongodb server:
 ```bash

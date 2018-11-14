@@ -5,7 +5,6 @@ import os
 import sys
 import json
 from pymongo import MongoClient
-from mongoengine import *
 import datetime
 
 
